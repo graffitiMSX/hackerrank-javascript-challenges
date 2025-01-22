@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "repository to add all my HackerRank code challenges",
   "main": "index.js",
+  "type": "module",
   "devDependencies": {
     "jest": "^29.7.0",
     "ts-jest": "^29.2.5"
@@ -12,5 +13,24 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": ".",
+    "testRegex": ".*\\.spec\\.(t|j)s$",
+    "transform": {
+      "^.+\\.[tj]s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "globals": {
+    },
+    "testEnvironment": "node"
+  }
 }
