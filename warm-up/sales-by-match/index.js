@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /*
  * Complete the 'sockMerchant' function below.
@@ -10,19 +10,16 @@
  */
 
 export default sockMerchant = (n, ar) => {
-  let pairs = 0  
-  let max = Math.max(...ar)
-  let socks = new Array(max)
+  let socks = Object.fromEntries(ar.map((k) => [k, 0]));
 
   for (let i = 0; i < n; i++) {
-    if (!socks[ar[i]]) socks[ar[i]] = 1
-    else socks[ar[i]]++
+    socks[ar[i]]++;
   }
 
-  for (let i = 0; i < socks.length; i++) {
-    if (socks[i])
-      pairs += Math.floor(socks[i] / 2)
-  }
+  let pairs = Object.values(socks).reduce(
+    (sum, value) => sum + Math.floor(value / 2),
+    0
+  );
 
-  return pairs
-}
+  return pairs;
+};
