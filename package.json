@@ -1,0 +1,16 @@
+{
+  "name": "hackerrank-javascript-challenges",
+  "version": "1.0.0",
+  "description": "repository to add all my HackerRank code challenges",
+  "main": "index.js",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
